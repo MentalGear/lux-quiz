@@ -9,8 +9,18 @@
     let container;
     let currentIndex = 0;
     let showConfirm = false;
-    let themeMode = 'light';
-    let showThemeMenu = false;
+    let themeMode = 'device';
+
+    // Initialize theme on page load
+    $: if (themeMode === 'device') {
+        if (typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.body.classList.add('dark-mode');
+            document.body.classList.remove('light-mode');
+        } else if (typeof window !== 'undefined') {
+            document.body.classList.add('light-mode');
+            document.body.classList.remove('dark-mode');
+        }
+    }
 
     function startGame() {
         gameSet = [...sayingsData]
@@ -68,20 +78,24 @@
         showConfirm = false;
     }
 
-    function toggleThemeMenu() {
-        showThemeMenu = !showThemeMenu;
-    }
-
     function setTheme(newMode) {
         themeMode = newMode;
-        showThemeMenu = false;
         // Apply theme to body
         if (themeMode === 'dark') {
             document.body.classList.add('dark-mode');
             document.body.classList.remove('light-mode');
-        } else {
+        } else if (themeMode === 'light') {
             document.body.classList.add('light-mode');
             document.body.classList.remove('dark-mode');
+        } else if (themeMode === 'device') {
+            // Use device preference
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.body.classList.add('dark-mode');
+                document.body.classList.remove('light-mode');
+            } else {
+                document.body.classList.add('light-mode');
+                document.body.classList.remove('dark-mode');
+            }
         }
     }
 
@@ -112,6 +126,15 @@
                 </select>
             </div>
 
+            <div class="control">
+                <label>Theme</label>
+                <select bind:value={themeMode} on:change={() => setTheme(themeMode)}>
+                    <option value="light">Light Mode</option>
+                    <option value="dark">Dark Mode</option>
+                    <option value="device">Device Settings</option>
+                </select>
+            </div>
+
             <button class="btn-primary" on:click={startGame}>Start Game</button>
         </div>
     {:else}
@@ -129,16 +152,6 @@
                     </div>
                 {/each}
             </div>
-
-            <button class="btn-theme-toggle floating" on:click={toggleThemeMenu}>🌓</button>
-
-            {#if showThemeMenu}
-                <div class="theme-menu">
-                    <button on:click={() => setTheme('light')}>Light Mode</button>
-                    <button on:click={() => setTheme('dark')}>Dark Mode</button>
-                    <button on:click={() => setTheme('device')}>Device Settings</button>
-                </div>
-            {/if}
 
             {#if gameSet[currentIndex].isRevealed && currentIndex < gameSet.length - 1}
                 <button class="btn-action floating-next" on:click={handleAction}>Next →</button>
@@ -184,6 +197,17 @@
     label { font-weight: 700; color: #444; display: block; margin-bottom: 0.5rem; }
     select { width: 100%; padding: 1rem; border-radius: 1rem; border: 2px solid #ddd; background: white; font-size: 1rem; }
 
+    :global(body.dark-mode) select {
+        background: #3d4448;
+        color: #f8f9fa;
+        border-color: #666;
+    }
+
+    :global(body.dark-mode) option {
+        background: #3d4448;
+        color: #f8f9fa;
+    }
+
     .progress-bar-container {
         width: 100%;
         height: 10px;
@@ -219,6 +243,11 @@
         z-index: 100;
     }
 
+    :global(body.dark-mode) .btn-back.floating {
+        background: #444;
+        color: #f8f9fa;
+    }
+
     .btn-theme-toggle.floating {
         position: absolute;
         bottom: 2rem;
@@ -236,19 +265,22 @@
         background: white;
         border-radius: 1rem;
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        padding: 0.5rem;
+        padding: 1rem;
         z-index: 101;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+        width: 200px;
     }
 
     .theme-menu button {
         background: none;
         border: none;
-        padding: 0.5rem 1rem;
+        padding: 1rem 1.5rem;
         cursor: pointer;
         border-radius: 0.5rem;
+        font-size: 1rem;
+        text-align: left;
     }
 
     .theme-menu button:hover {
@@ -294,6 +326,11 @@
         max-width: 400px;
     }
 
+    :global(body.dark-mode) .confirm-dialog {
+        background: #3d4448;
+        color: #f8f9fa;
+    }
+
     .confirm-buttons {
         display: flex;
         justify-content: center;
@@ -302,13 +339,13 @@
     }
 
     .btn-cancel {
-        background: #ccc; color: white; border: none; padding: 0.5rem 1.5rem;
-        border-radius: 0.5rem; cursor: pointer;
+        background: #ccc; color: white; border: none; padding: 1rem 2rem;
+        border-radius: 100px; font-weight: bold; font-size: 1.2rem; cursor: pointer;
     }
 
     .btn-confirm {
-        background: #EF3340; color: white; border: none; padding: 0.5rem 1.5rem;
-        border-radius: 0.5rem; cursor: pointer;
+        background: #EF3340; color: white; border: none; padding: 1rem 2rem;
+        border-radius: 100px; font-weight: bold; font-size: 1.2rem; cursor: pointer;
     }
 
     .btn-primary {

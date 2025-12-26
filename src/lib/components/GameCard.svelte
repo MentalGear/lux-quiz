@@ -55,14 +55,26 @@
         padding: 2rem;
     }
 
+    :global(body.dark-mode) .card {
+        background: #3d4448;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
     .content { text-align: center; width: 100%; }
     .text-block.lu { font-size: 1.8rem; font-weight: 800; color: #2d3436; }
     .text-block.en { font-size: 1.2rem; color: #636e72; font-style: italic; }
-    
+
+    :global(body.dark-mode) .text-block.lu { color: #f8f9fa; }
+    :global(body.dark-mode) .text-block.en { color: #b2bec3; }
+
     .part1 { display: block; margin-bottom: 0.5rem; }
     .lu .part1 { color: #00A3E0; }
 
+    :global(body.dark-mode) .lu .part1 { color: #00A3E0; }
+
     .divider { height: 2px; width: 40px; background: #eee; margin: 2rem auto; }
+
+    :global(body.dark-mode) .divider { background: #666; }
 
     .word {
         display: inline-block;
