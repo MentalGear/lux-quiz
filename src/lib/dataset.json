@@ -2,79 +2,49 @@
   {
     "lu_part1": "Den Honger",
     "lu_part2": "ass de beschte Kach.",
-    "en_literal": "The hunger is the best cook.",
-    "en_correct": "Hunger is the best sauce."
+    "en_literal_p1": "The hunger",
+    "en_literal_p2": "is the best cook.",
+    "en_correct_p1": "Hunger",
+    "en_correct_p2": "is the best sauce."
   },
   {
     "lu_part1": "Moiesstonn",
     "lu_part2": "huet Gold am Mond.",
-    "en_literal": "Morning hour has gold in the mouth.",
-    "en_correct": "The early bird catches the worm."
-  },
-  {
-    "lu_part1": "Wann den Hond net geschass hätt,",
-    "lu_part2": "hätt en den Hues kritt.",
-    "en_literal": "If the dog hadn't pooped, he would have caught the hare.",
-    "en_correct": "If 'ifs' and 'ands' were pots and pans."
-  },
-  {
-    "lu_part1": "E gudden Iesel",
-    "lu_part2": "stéisst sech nëmmen eemol.",
-    "en_literal": "A good donkey bumps himself only once.",
-    "en_correct": "A wise man only makes a mistake once."
-  },
-  {
-    "lu_part1": "An der Nout",
-    "lu_part2": "frisst den Deiwel Mécken.",
-    "en_literal": "In the need, the devil eats flies.",
-    "en_correct": "Beggars can't be choosers."
-  },
-  {
-    "lu_part1": "Et ass nach kee Meeschter",
-    "lu_part2": "vum Himmel gefall.",
-    "en_literal": "No master has fallen from the sky yet.",
-    "en_correct": "Practice makes perfect."
-  },
-  {
-    "lu_part1": "Wéi ee sech bett,",
-    "lu_part2": "esou läit een.",
-    "en_literal": "How one beds oneself, so one lies.",
-    "en_correct": "You've made your bed, now lie in it."
-  },
-  {
-    "lu_part1": "Alles huet en Enn,",
-    "lu_part2": "nëmmen d'Wurscht huet der zwee.",
-    "en_literal": "Everything has an end, only the sausage has two.",
-    "en_correct": "All good things must come to an end."
-  },
-  {
-    "lu_part1": "Wann et dem Iesel ze gutt geet,",
-    "lu_part2": "geet en op d'Äis danzen.",
-    "en_literal": "When the donkey feels too good, he goes dancing on the ice.",
-    "en_correct": "Fortune makes fools of men."
-  },
-  {
-    "lu_part1": "Léien",
-    "lu_part2": "hunn kuerz Been.",
-    "en_literal": "Lies have short legs.",
-    "en_correct": "A lie has no legs."
-  },
-  {
-    "lu_part1": "E gëtt näischt sou reng gesponnen,",
-    "lu_part2": "et kënnt dach un d'Sonn.",
-    "en_literal": "Nothing is spun so fine that it doesn't come to the sun.",
-    "en_correct": "The truth will out."
-  },
-  {
-    "lu_part1": "Wat ee méi huet,",
-    "lu_part2": "wat ee méi wëll.",
-    "en_literal": "The more one has, the more one wants.",
-    "en_correct": "Greed has no limits."
+    "en_literal_p1": "Morning hour",
+    "en_literal_p2": "has gold in the mouth.",
+    "en_correct_p1": "The early bird",
+    "en_correct_p2": "catches the worm."
   },
   {
     "lu_part1": "Stëll Waasser",
     "lu_part2": "sinn déif.",
-    "en_literal": "Still waters are deep.",
-    "en_correct": "Still waters run deep."
+    "en_literal_p1": "Still waters",
+    "en_literal_p2": "are deep.",
+    "en_correct_p1": "Still waters",
+    "en_correct_p2": "run deep."
+  },
+  {
+    "lu_part1": "Wann den Hond net geschass hätt,",
+    "lu_part2": "hätt en den Hues kritt.",
+    "en_literal_p1": "If the dog hadn't pooped,",
+    "en_literal_p2": "he would have caught the hare.",
+    "en_correct_p1": "If 'ifs' and 'ands'",
+    "en_correct_p2": "were pots and pans."
+  },
+  {
+    "lu_part1": "An der Nout",
+    "lu_part2": "frisst den Deiwel Mécken.",
+    "en_literal_p1": "In the need,",
+    "en_literal_p2": "the devil eats flies.",
+    "en_correct_p1": "Beggars",
+    "en_correct_p2": "can't be choosers."
+  },
+  {
+    "lu_part1": "Kueben",
+    "lu_part2": "picken deene aneren d'Aen net aus.",
+    "en_literal_p1": "Ravens",
+    "en_literal_p2": "don't pick the eyes out of others.",
+    "en_correct_p1": "There is honor",
+    "en_correct_p2": "among thieves."
   }
 ]

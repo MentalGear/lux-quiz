@@ -1,71 +1,81 @@
 <script>
-	export let saying;
-	export let mode;
-	export let revealed = false;
+    export let saying;
+    export let mode;
+    export let revealed = false;
 
-	$: words = saying.lu_part2.split(' ');
+    // Determine which English parts to show
+    $: en_p1 = mode === 'literal' ? saying.en_literal_p1 : saying.en_correct_p1;
+    $: en_p2 = mode === 'literal' ? saying.en_literal_p2 : saying.en_correct_p2;
+
+    $: luWords = saying.lu_part2.split(' ');
+    $: enWords = en_p2.split(' ');
 </script>
 
 <div class="card">
-	<div class="content">
-		<div class="lu-text">
-			<span class="part1">{saying.lu_part1}</span>
-			<div class="part2">
-				{#each words as word, i}
-					<span 
-						class="word" 
-						class:revealed 
-						style="transition-delay: {revealed ? i * 150 : 0}ms"
-					>
-						{word}
-					</span>
-				{/each}
-			</div>
-		</div>
+    <div class="content">
+        <div class="text-block lu">
+            <span class="part1">{saying.lu_part1}</span>
+            <div class="part2">
+                {#each luWords as word, i}
+                    <span class="word" class:revealed style="transition-delay: {revealed ? i * 100 : 0}ms">
+                        {word}
+                    </span>
+                {/each}
+            </div>
+        </div>
 
-		{#if mode !== 'lu'}
-			<hr />
-			<div class="en-text">
-				{mode === 'literal' ? saying.en_literal : saying.en_correct}
-			</div>
-		{/if}
-	</div>
+        {#if mode !== 'lu'}
+            <div class="divider"></div>
+            
+            <div class="text-block en">
+                <span class="part1">{en_p1}</span>
+                <div class="part2">
+                    {#each enWords as word, i}
+                        <span class="word" class:revealed style="transition-delay: {revealed ? (luWords.length + i) * 100 : 0}ms">
+                            {word}
+                        </span>
+                    {/each}
+                </div>
+            </div>
+        {/if}
+    </div>
 </div>
 
 <style>
-	.card {
-		width: 90%;
-		max-width: 400px;
-		height: 350px;
-		background: white;
-		border-radius: 24px;
-		box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 30px;
-		text-align: center;
-	}
+    .card {
+        width: 85svw;
+        max-width: 500px;
+        height: 60svh;
+        background: white;
+        border-radius: 2rem;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+    }
 
-	.lu-text { font-size: 1.5rem; font-weight: 600; line-height: 1.4; color: #333; }
-	.en-text { font-size: 1.1rem; color: #666; font-style: italic; }
-	
-	hr { width: 40%; margin: 25px auto; border: 0; border-top: 2px solid #eee; }
+    .content { text-align: center; width: 100%; }
+    .text-block.lu { font-size: 1.8rem; font-weight: 800; color: #2d3436; }
+    .text-block.en { font-size: 1.2rem; color: #636e72; font-style: italic; }
+    
+    .part1 { display: block; margin-bottom: 0.5rem; }
+    .lu .part1 { color: #00A3E0; }
 
-	.word {
-		display: inline-block;
-		opacity: 0;
-		filter: blur(8px);
-		transform: translateY(4px);
-		transition: opacity 0.6s ease-out, filter 0.6s ease-out, transform 0.6s ease-out;
-		margin-right: 0.2em;
-	}
+    .divider { height: 2px; width: 40px; background: #eee; margin: 2rem auto; }
 
-	.word.revealed {
-		opacity: 1;
-		filter: blur(0px);
-		transform: translateY(0);
-	}
+    .word {
+        display: inline-block;
+        opacity: 0;
+        filter: blur(12px);
+        transform: translateY(10px);
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        margin-right: 0.3rem;
+    }
 
-	.part1 { display: block; margin-bottom: 5px; color: #00A3E0; }
+    .word.revealed {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateY(0);
+    }
 </style>
