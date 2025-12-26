@@ -4,8 +4,11 @@
     export let revealed = false;
 
     // Determine which English parts to show
-    $: en_p1 = mode === 'literal' ? saying.en_literal_p1 : saying.en_correct_p1;
-    $: en_p2 = mode === 'literal' ? saying.en_literal_p2 : saying.en_correct_p2;
+    $: en_p1 = mode === 'literal' ? saying.en_literal_p1 : mode === 'correct' ? saying.en_correct_p1 : saying.en_literal_p1;
+    $: en_p2 = mode === 'literal' ? saying.en_literal_p2 : mode === 'correct' ? saying.en_correct_p2 : saying.en_literal_p2;
+
+    // Determine which parts to reveal
+    $: showEnglish = mode === 'en_to_lu';
 
     $: luWords = saying.lu_part2.split(' ');
     $: enWords = en_p2.split(' ');
@@ -13,30 +16,58 @@
 
 <div class="card">
     <div class="content">
-        <div class="text-block lu">
-            <span class="part1">{saying.lu_part1}</span>
-            <div class="part2">
-                {#each luWords as word, i}
-                    <span class="word" class:revealed style="transition-delay: {revealed ? i * 100 : 0}ms">
-                        {word}
-                    </span>
-                {/each}
-            </div>
-        </div>
-
-        {#if mode !== 'lu'}
-            <div class="divider"></div>
-            
+        {#if showEnglish}
             <div class="text-block en">
                 <span class="part1">{en_p1}</span>
                 <div class="part2">
                     {#each enWords as word, i}
-                        <span class="word" class:revealed style="transition-delay: {revealed ? (luWords.length + i) * 100 : 0}ms">
+                        <span class="word" class:revealed style="transition-delay: {revealed ? i * 100 : 0}ms">
                             {word}
                         </span>
                     {/each}
                 </div>
             </div>
+            
+            {#if revealed}
+                <div class="divider"></div>
+                
+                <div class="text-block lu">
+                    <span class="part1">{saying.lu_part1}</span>
+                    <div class="part2">
+                        {#each luWords as word, i}
+                            <span class="word" class:revealed style="transition-delay: {revealed ? (enWords.length + i) * 100 : 0}ms">
+                                {word}
+                            </span>
+                        {/each}
+                    </div>
+                </div>
+            {/if}
+        {:else}
+            <div class="text-block lu">
+                <span class="part1">{saying.lu_part1}</span>
+                <div class="part2">
+                    {#each luWords as word, i}
+                        <span class="word" class:revealed style="transition-delay: {revealed ? i * 100 : 0}ms">
+                            {word}
+                        </span>
+                    {/each}
+                </div>
+            </div>
+
+            {#if mode !== 'lu'}
+                <div class="divider"></div>
+                
+                <div class="text-block en">
+                    <span class="part1">{en_p1}</span>
+                    <div class="part2">
+                        {#each enWords as word, i}
+                            <span class="word" class:revealed style="transition-delay: {revealed ? (luWords.length + i) * 100 : 0}ms">
+                                {word}
+                            </span>
+                        {/each}
+                    </div>
+                </div>
+            {/if}
         {/if}
     </div>
 </div>

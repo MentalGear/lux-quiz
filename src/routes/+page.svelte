@@ -10,6 +10,9 @@
     let currentIndex = 0;
     let showConfirm = false;
     let themeMode = 'device';
+    let popularityMin = 1;
+    let popularityMax = 5;
+    let difficulty = 'medium';
 
     // Initialize theme on page load
     $: if (themeMode === 'device') {
@@ -123,10 +126,40 @@
                     <option value="lu">Luxembourgish Only</option>
                     <option value="literal">LU + English Literal</option>
                     <option value="correct">LU + English Equivalent</option>
+                    <!-- <option value="en_to_lu">English to Luxembourgish</option> -->
                 </select>
             </div>
 
             <div class="control">
+                <label>Difficulty Range</label>
+                <div class="range-container">
+                    <select bind:value={popularityMin} on:change={() => { if (popularityMin > popularityMax) popularityMax = popularityMin; }}>
+                        {#each Array.from({length: 5}, (_, i) => i+1) as num}
+                            <option value={num}>{num}</option>
+                        {/each}
+                    </select>
+                    <select bind:value={popularityMax} on:change={() => { if (popularityMax < popularityMin) popularityMin = popularityMax; }}>
+                        {#each Array.from({length: 5}, (_, i) => i+1) as num}
+                            <option value={num}>{num}</option>
+                        {/each}
+                    </select>
+                </div>
+                <!-- <span>Min: {popularityMin}, Max: {popularityMax}</span> -->
+            </div>
+         
+            <!-- <div class="control">
+                <label>Difficulty</label>
+                <select bind:value={difficulty}>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div> -->
+        
+            <button class="btn-primary" on:click={startGame}>Start Game</button>
+
+
+            <div class="control" style="margin-top: 50px">
                 <label>Theme</label>
                 <select bind:value={themeMode} on:change={() => setTheme(themeMode)}>
                     <option value="light">Light Mode</option>
@@ -134,8 +167,7 @@
                     <option value="device">Device Settings</option>
                 </select>
             </div>
-
-            <button class="btn-primary" on:click={startGame}>Start Game</button>
+        
         </div>
     {:else}
         <div class="screen game">
@@ -149,6 +181,7 @@
                     <option value="lu">🇱🇺 LU</option>
                     <option value="literal">🌐 Literal</option>
                     <option value="correct">🌐 Equivalent</option>
+                    <!-- <option value="en_to_lu">🌐→🇱🇺</option> -->
                 </select>
             </div>
 
@@ -203,8 +236,22 @@
     .control { width: 100%; margin-bottom: 2rem; }
     label { font-weight: 700; color: #444; display: block; margin-bottom: 0.5rem; }
     select { width: 100%; padding: 1rem; border-radius: 1rem; border: 2px solid #ddd; background: white; font-size: 1rem; }
+    .range-container { display: flex; gap: 1rem; }
+    .range-container select { width: 50%; }
+
+    :global(body.dark-mode) h1 {
+        color: #f8f9fa;
+    }
+
+    :global(body.dark-mode) h1 {
+        color: #f8f9fa;
+    }
 
     :global(body.dark-mode) label {
+        color: #f8f9fa;
+    }
+
+    :global(body.dark-mode) span {
         color: #f8f9fa;
     }
 

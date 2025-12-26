@@ -1,50 +1,982 @@
 [
   {
-    "lu_part1": "Den Honger",
-    "lu_part2": "ass de beschte Kach.",
-    "en_literal_p1": "The hunger",
+    "lu_part1": "Wien A seet,",
+    "lu_part2": "muss och B soen.",
+    "en_literal_p1": "Who says A,",
+    "en_literal_p2": "must also say B.",
+    "en_correct_p1": "In for a penny,",
+    "en_correct_p2": "in for a pound.",
+    "difficulty": 2,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Wann d'Aarbecht ee räich méich,",
+    "lu_part2": "da wier den Iesel méi räich wéi de Mëller.",
+    "en_literal_p1": "If work made one rich,",
+    "en_literal_p2": "then the donkey would be richer than the miller.",
+    "en_correct_p1": "Hard work alone",
+    "en_correct_p2": "does not lead to wealth.",
+    "difficulty": 3,
+    "popularity": 2
+  },
+  {
+    "lu_part1": "Vun der Aarbecht",
+    "lu_part2": "gëtt kee fett.",
+    "en_literal_p1": "From work",
+    "en_literal_p2": "no one gets fat.",
+    "en_correct_p1": "Hard work",
+    "en_correct_p2": "rarely makes you rich.",
+    "difficulty": 2,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Dat Aalt",
+    "lu_part2": "dauert am längsten.",
+    "en_literal_p1": "The old",
+    "en_literal_p2": "lasts the longest.",
+    "en_correct_p1": "Old things",
+    "en_correct_p2": "last the longest.",
+    "difficulty": 1,
+    "popularity": 3
+  },
+  {
+    "lu_part1": "Besser e midden Aarm,",
+    "lu_part2": "wéi een eidelen Daarm.",
+    "en_literal_p1": "Better a tired arm,",
+    "en_literal_p2": "than an empty gut.",
+    "en_correct_p1": "Better to be tired from work",
+    "en_correct_p2": "than to go hungry.",
+    "difficulty": 3,
+    "popularity": 3
+  },
+  {
+    "lu_part1": "Aarm sinn",
+    "lu_part2": "ass keng Schan.",
+    "en_literal_p1": "Being poor",
+    "en_literal_p2": "is no shame.",
+    "en_correct_p1": "Poverty",
+    "en_correct_p2": "is no disgrace.",
+    "difficulty": 1,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "D'Aarmut",
+    "lu_part2": "ass e Sträitmécher.",
+    "en_literal_p1": "Poverty",
+    "en_literal_p2": "is a fight-maker.",
+    "en_correct_p1": "Poverty",
+    "en_correct_p2": "breeds conflict.",
+    "difficulty": 3,
+    "popularity": 2
+  },
+  {
+    "lu_part1": "Hien huet mech net emol",
+    "lu_part2": "mam Aasch bekuckt.",
+    "en_literal_p1": "He didn't even",
+    "en_literal_p2": "look at me with his ass.",
+    "en_correct_p1": "He totally",
+    "en_correct_p2": "ignored me.",
+    "difficulty": 4,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Adam an Éiv waren",
+    "lu_part2": "déi zwéin éischt Äppeldéif.",
+    "en_literal_p1": "Adam and Eve were",
+    "en_literal_p2": "the two first apple-thieves.",
+    "en_correct_p1": "Adam and Eve were",
+    "en_correct_p2": "the original sinners.",
+    "difficulty": 2,
+    "popularity": 3
+  },
+  {
+    "lu_part1": "Aus den Aen,",
+    "lu_part2": "aus dem Sënn.",
+    "en_literal_p1": "Out of the eyes,",
+    "en_literal_p2": "out of the mind.",
+    "en_correct_p1": "Out of sight,",
+    "en_correct_p2": "out of mind.",
+    "difficulty": 1,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Véier Ae",
+    "lu_part2": "gesi méi wéi zwee.",
+    "en_literal_p1": "Four eyes",
+    "en_literal_p2": "see more than two.",
+    "en_correct_p1": "Two heads",
+    "en_correct_p2": "are better than one.",
+    "difficulty": 2,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "D'Aen op",
+    "lu_part2": "oder de Beidel.",
+    "en_literal_p1": "Eyes open",
+    "en_literal_p2": "or the purse.",
+    "en_correct_p1": "Pay attention",
+    "en_correct_p2": "or pay the price.",
+    "difficulty": 4,
+    "popularity": 3
+  },
+  {
+    "lu_part1": "Wat een net ännere kann,",
+    "lu_part2": "soll ee roueg erdroen.",
+    "en_literal_p1": "What one cannot change,",
+    "en_literal_p2": "one should endure calmly.",
+    "en_correct_p1": "What can't be cured",
+    "en_correct_p2": "must be endured.",
+    "difficulty": 2,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Näischt gesot",
+    "lu_part2": "ass och eng Äntwert.",
+    "en_literal_p1": "Nothing said",
+    "en_literal_p2": "is also an answer.",
+    "en_correct_p1": "Silence",
+    "en_correct_p2": "is also an answer.",
+    "difficulty": 2,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Een Af",
+    "lu_part2": "mécht der honnert.",
+    "en_literal_p1": "One monkey",
+    "en_literal_p2": "makes a hundred.",
+    "en_correct_p1": "Monkey see,",
+    "en_correct_p2": "monkey do.",
+    "difficulty": 3,
+    "popularity": 3
+  },
+  {
+    "lu_part1": "Engem Af",
+    "lu_part2": "geet alles gutt.",
+    "en_literal_p1": "For a monkey,",
+    "en_literal_p2": "everything goes well.",
+    "en_correct_p1": "Fools",
+    "en_correct_p2": "have all the luck.",
+    "difficulty": 4,
+    "popularity": 2
+  },
+  {
+    "lu_part1": "Ech ginn der",
+    "lu_part2": "gläich en Akkont!",
+    "en_literal_p1": "I'll give you",
+    "en_literal_p2": "a down payment soon!",
+    "en_correct_p1": "I'm going",
+    "en_correct_p2": "to slap you!",
+    "difficulty": 5,
+    "popularity": 3
+  },
+  {
+    "lu_part1": "Léier keen alen Af",
+    "lu_part2": "Grimasse maachen.",
+    "en_literal_p1": "Don't teach an old monkey",
+    "en_literal_p2": "to make faces.",
+    "en_correct_p1": "Don't teach your grandmother",
+    "en_correct_p2": "how to suck eggs.",
+    "difficulty": 4,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Al Eisen, ale Goss,",
+    "lu_part2": "al Fraen, ale Verdross.",
+    "en_literal_p1": "Old iron, old cast,",
+    "en_literal_p2": "old women, old annoyance.",
+    "en_correct_p1": "Old habits and old things",
+    "en_correct_p2": "bring old troubles.",
+    "difficulty": 5,
+    "popularity": 1
+  },
+  {
+    "lu_part1": "Bei den Alen",
+    "lu_part2": "ass ee gutt gehalen.",
+    "en_literal_p1": "With the old ones,",
+    "en_literal_p2": "one is well kept.",
+    "en_correct_p1": "Old people",
+    "en_correct_p2": "know best how to care for you.",
+    "difficulty": 3,
+    "popularity": 3
+  },
+  {
+    "lu_part1": "Alles leeft,",
+    "lu_part2": "nëmmen de Fräsch deen hopst.",
+    "en_literal_p1": "Everything runs,",
+    "en_literal_p2": "only the frog hops.",
+    "en_correct_p1": "Everything moves along,",
+    "en_correct_p2": "each in its own way.",
+    "difficulty": 4,
+    "popularity": 3
+  },
+  {
+    "lu_part1": "Den Alter",
+    "lu_part2": "geet vir.",
+    "en_literal_p1": "Old age",
+    "en_literal_p2": "goes first.",
+    "en_correct_p1": "Age",
+    "en_correct_p2": "before beauty.",
+    "difficulty": 2,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "An Amen a Jo",
+    "lu_part2": "war d'Affär gedoen.",
+    "en_literal_p1": "In Amen and Yes,",
+    "en_literal_p2": "the business was done.",
+    "en_correct_p1": "It was done",
+    "en_correct_p2": "in a flash.",
+    "difficulty": 4,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Sécher wéi den Amen",
+    "lu_part2": "am Gebiet.",
+    "en_literal_p1": "Certain as the Amen",
+    "en_literal_p2": "in the prayer.",
+    "en_correct_p1": "As sure",
+    "en_correct_p2": "as eggs is eggs.",
+    "difficulty": 2,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Den Apel fält net wäit vum Bam,",
+    "lu_part2": "e misst just de Bierg erofrullen.",
+    "en_literal_p1": "The apple falls not far from the tree,",
+    "en_literal_p2": "unless it rolls down the hill.",
+    "en_correct_p1": "Like father,",
+    "en_correct_p2": "like son.",
+    "difficulty": 3,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Et soll ee sech ëmmer een Apel",
+    "lu_part2": "fir den Duuscht versuergen.",
+    "en_literal_p1": "One should always keep an apple",
+    "en_literal_p2": "for the thirst.",
+    "en_correct_p1": "Save something",
+    "en_correct_p2": "for a rainy day.",
+    "difficulty": 3,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Den Appetit kënnt",
+    "lu_part2": "iwwer dem Iessen.",
+    "en_literal_p1": "The appetite comes",
+    "en_literal_p2": "during the eating.",
+    "en_correct_p1": "Appetite comes",
+    "en_correct_p2": "with eating.",
+    "difficulty": 2,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "D'Ausriede si",
+    "lu_part2": "fir ze gebrauchen.",
+    "en_literal_p1": "Excuses are",
+    "en_literal_p2": "there to be used.",
+    "en_correct_p1": "People will always",
+    "en_correct_p2": "find an excuse.",
+    "difficulty": 3,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Bal ass nach keng Maus",
+    "lu_part2": "an der Fal.",
+    "en_literal_p1": "Almost is not yet a mouse",
+    "en_literal_p2": "in the trap.",
+    "en_correct_p1": "A miss",
+    "en_correct_p2": "is as good as a mile.",
+    "difficulty": 4,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Besser den Aascht fält",
+    "lu_part2": "wéi de Bam.",
+    "en_literal_p1": "Better the branch falls",
+    "en_literal_p2": "than the tree.",
+    "en_correct_p1": "Better a small loss",
+    "en_correct_p2": "than a total disaster.",
+    "difficulty": 3,
+    "popularity": 2
+  },
+  {
+    "lu_part1": "En ale Bam",
+    "lu_part2": "verplanzt een net.",
+    "en_literal_p1": "An old tree",
+    "en_literal_p2": "one does not transplant.",
+    "en_correct_p1": "You can't teach",
+    "en_correct_p2": "an old dog new tricks.",
+    "difficulty": 3,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Déi dommst Baueren",
+    "lu_part2": "hunn déi déckst Gromperen.",
+    "en_literal_p1": "The dumbest farmers",
+    "en_literal_p2": "have the thickest potatoes.",
+    "en_correct_p1": "Fools",
+    "en_correct_p2": "have all the luck.",
+    "difficulty": 4,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Wat de Bauer net kennt,",
+    "lu_part2": "dat frësst en net.",
+    "en_literal_p1": "What the farmer doesn't know,",
+    "en_literal_p2": "he doesn't eat.",
+    "en_correct_p1": "People are wary",
+    "en_correct_p2": "of the unknown.",
+    "difficulty": 3,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "E Bauer, e Béier an e Stéier,",
+    "lu_part2": "dat sinn dräi ongemälleg Déier.",
+    "en_literal_p1": "A farmer, a boar and a bull,",
+    "en_literal_p2": "those are three uncomfortable animals.",
+    "en_correct_p1": "Some things are best",
+    "en_correct_p2": "left alone.",
+    "difficulty": 5,
+    "popularity": 1
+  },
+  {
+    "lu_part1": "Et ass dofir gesuergt, datt d'Beem",
+    "lu_part2": "net an den Himmel wuessen.",
+    "en_literal_p1": "It is ensured that the trees",
+    "en_literal_p2": "don't grow into the sky.",
+    "en_correct_p1": "Everything",
+    "en_correct_p2": "has its limits.",
+    "difficulty": 4,
+    "popularity": 3
+  },
+  {
+    "lu_part1": "Wat een net am Kapp huet,",
+    "lu_part2": "muss een an de Been hunn.",
+    "en_literal_p1": "What one doesn't have in the head,",
+    "en_literal_p2": "one must have in the legs.",
+    "en_correct_p1": "A weak head",
+    "en_correct_p2": "makes for weary feet.",
+    "difficulty": 2,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Wéi e beicht,",
+    "lu_part2": "sou gëtt ee lassgesprach.",
+    "en_literal_p1": "As one confesses,",
+    "en_literal_p2": "so is one absolved.",
+    "en_correct_p1": "You get",
+    "en_correct_p2": "what you give.",
+    "difficulty": 4,
+    "popularity": 2
+  },
+  {
+    "lu_part1": "Wéi een an de Bësch rifft,",
+    "lu_part2": "sou schaalt et erëm.",
+    "en_literal_p1": "As one calls into the forest,",
+    "en_literal_p2": "so it echoes back.",
+    "en_correct_p1": "What goes around,",
+    "en_correct_p2": "comes around.",
+    "difficulty": 2,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Dat bescht",
+    "lu_part2": "kënnt hannenno.",
+    "en_literal_p1": "The best",
+    "en_literal_p2": "comes afterwards.",
+    "en_correct_p1": "Save the best",
+    "en_correct_p2": "for last.",
+    "difficulty": 1,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Besser ass besser,",
+    "lu_part2": "sot d'Fra.",
+    "en_literal_p1": "Better is better,",
+    "en_literal_p2": "said the woman.",
+    "en_correct_p1": "Better safe",
+    "en_correct_p2": "than sorry.",
+    "difficulty": 4,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Besser eng Kuuscht an der Täsch,",
+    "lu_part2": "wéi eng Fieder um Hutt.",
+    "en_literal_p1": "Better a crust in the pocket,",
+    "en_literal_p2": "than a feather on the hat.",
+    "en_correct_p1": "Substance",
+    "en_correct_p2": "over style.",
+    "difficulty": 4,
+    "popularity": 3
+  },
+  {
+    "lu_part1": "Besser spéit eppes,",
+    "lu_part2": "wéi fréi näischt.",
+    "en_literal_p1": "Better something late,",
+    "en_literal_p2": "than nothing early.",
+    "en_correct_p1": "Better late",
+    "en_correct_p2": "than never.",
+    "difficulty": 2,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "D'Bestueden",
+    "lu_part2": "ass eng Lotterie.",
+    "en_literal_p1": "Marriage",
+    "en_literal_p2": "is a lottery.",
+    "en_correct_p1": "Marriage",
+    "en_correct_p2": "is a gamble.",
+    "difficulty": 1,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Wéi ee säi Bett mécht,",
+    "lu_part2": "sou schléift een.",
+    "en_literal_p1": "How one makes their bed,",
+    "en_literal_p2": "so one sleeps.",
+    "en_correct_p1": "You made your bed,",
+    "en_correct_p2": "now lie in it.",
+    "difficulty": 2,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Et ass besser biedelen,",
+    "lu_part2": "wéi stielen.",
+    "en_literal_p1": "It is better to beg,",
+    "en_literal_p2": "than to steal.",
+    "en_correct_p1": "Honest poverty",
+    "en_correct_p2": "is better than theft.",
+    "difficulty": 3,
+    "popularity": 3
+  },
+  {
+    "lu_part1": "Hanner dem Bierg",
+    "lu_part2": "sinn och Leit.",
+    "en_literal_p1": "Behind the mountain",
+    "en_literal_p2": "are also people.",
+    "en_correct_p1": "There is a world",
+    "en_correct_p2": "beyond your horizon.",
+    "difficulty": 4,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "En neie Biesem",
+    "lu_part2": "kiert besser.",
+    "en_literal_p1": "A new broom",
+    "en_literal_p2": "sweeps better.",
+    "en_correct_p1": "A new broom",
+    "en_correct_p2": "sweeps clean.",
+    "difficulty": 2,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Och eng blann Sau",
+    "lu_part2": "kann eng Eechel fannen.",
+    "en_literal_p1": "Even a blind sow",
+    "en_literal_p2": "can find an acorn.",
+    "en_correct_p1": "Even a blind squirrel",
+    "en_correct_p2": "finds a nut sometimes.",
+    "difficulty": 2,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Et ass nach laang net alles Gold,",
+    "lu_part2": "wat blénkt.",
+    "en_literal_p1": "It is not yet all gold,",
+    "en_literal_p2": "that shines.",
+    "en_correct_p1": "All that glitters",
+    "en_correct_p2": "is not gold.",
+    "difficulty": 1,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Mengen a Botter schäissen",
+    "lu_part2": "ass zweeërlee.",
+    "en_literal_p1": "Thinking and shitting butter",
+    "en_literal_p2": "are two different things.",
+    "en_correct_p1": "Thinking you know",
+    "en_correct_p2": "isn't the same as knowing.",
+    "difficulty": 5,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Du bass net hei,",
+    "lu_part2": "fir brong ze ginn!",
+    "en_literal_p1": "You are not here",
+    "en_literal_p2": "to get tanned!",
+    "en_correct_p1": "You are not here",
+    "en_correct_p2": " to sit around idle!",
+    "difficulty": 3,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Ech kéint en ongespëtzt",
+    "lu_part2": "an de Buedem schloen!",
+    "en_literal_p1": "I could hit him unsharpened",
+    "en_literal_p2": "into the ground!",
+    "en_correct_p1": "He is making me",
+    "en_correct_p2": "furious!",
+    "difficulty": 5,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Grénge Chrëschtdag,",
+    "lu_part2": "wäissen Ouschterdag.",
+    "en_literal_p1": "Green Christmas,",
+    "en_literal_p2": "white Easter day.",
+    "en_correct_p1": "A warm Christmas",
+    "en_correct_p2": "means a cold Easter.",
+    "difficulty": 4,
+    "popularity": 3
+  },
+  {
+    "lu_part1": "D'Chance geet",
+    "lu_part2": "dem Soff no.",
+    "en_literal_p1": "Luck follows",
+    "en_literal_p2": "the drunkard.",
+    "en_correct_p1": "The drunk",
+    "en_correct_p2": "always has luck.",
+    "difficulty": 4,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Du hues méi Chance",
+    "lu_part2": "ewéi Verstand.",
+    "en_literal_p1": "You have more luck",
+    "en_literal_p2": "than sense.",
+    "en_correct_p1": "You are",
+    "en_correct_p2": "more lucky than smart.",
+    "difficulty": 2,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Wat den Dag méi helleg,",
+    "lu_part2": "wat der Däiwel méi rosen.",
+    "en_literal_p1": "The holier the day,",
+    "en_literal_p2": "the angrier the devil.",
+    "en_correct_p1": "Temptation is strongest",
+    "en_correct_p2": "on the most sacred occasions.",
+    "difficulty": 4,
+    "popularity": 2
+  },
+  {
+    "lu_part1": "Et gëtt näischt sou reng gestiicht,",
+    "lu_part2": "t'kënnt dach un Dagesliicht.",
+    "en_literal_p1": "Nothing is sewn so finely,",
+    "en_literal_p2": "it still comes to daylight.",
+    "en_correct_p1": "The truth",
+    "en_correct_p2": "will always come out.",
+    "difficulty": 4,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Wou Damp ass,",
+    "lu_part2": "do ass och Feier.",
+    "en_literal_p1": "Where there is smoke,",
+    "en_literal_p2": "there is also fire.",
+    "en_correct_p1": "Where there is smoke,",
+    "en_correct_p2": "there is fire.",
+    "difficulty": 1,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Engem Dawen",
+    "lu_part2": "ass gutt priedegen.",
+    "en_literal_p1": "To a deaf person",
+    "en_literal_p2": "it is good preaching.",
+    "en_correct_p1": "It is easy to talk",
+    "en_correct_p2": "when no one can argue.",
+    "difficulty": 4,
+    "popularity": 3
+  },
+  {
+    "lu_part1": "Et muss ee sech",
+    "lu_part2": "der Decke no strecken.",
+    "en_literal_p1": "One must stretch",
+    "en_literal_p2": "according to the blanket.",
+    "en_correct_p1": "Live within",
+    "en_correct_p2": "your means.",
+    "difficulty": 4,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "All Déierche",
+    "lu_part2": "säi Pleséierchen.",
+    "en_literal_p1": "Every little animal",
+    "en_literal_p2": "its little pleasure.",
+    "en_correct_p1": "To each",
+    "en_correct_p2": "their own.",
+    "difficulty": 3,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Dee klengen Déif hänkt een,",
+    "lu_part2": "de grousse léisst ee lafen.",
+    "en_literal_p1": "The small thief is hanged,",
+    "en_literal_p2": "the big one is let go.",
+    "en_correct_p1": "Laws catch small flies",
+    "en_correct_p2": "but let hornets go free.",
+    "difficulty": 3,
+    "popularity": 3
+  },
+  {
+    "lu_part1": "Een Däiwel",
+    "lu_part2": "dreift deen aneren.",
+    "en_literal_p1": "One devil",
+    "en_literal_p2": "drives out the other.",
+    "en_correct_p1": "One problem",
+    "en_correct_p2": "replaces another.",
+    "difficulty": 3,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Wann der Däiwel hongereg ass,",
+    "lu_part2": "da frësst e Fléi.",
+    "en_literal_p1": "When the devil is hungry,",
+    "en_literal_p2": "he eats flies.",
+    "en_correct_p1": "Beggars",
+    "en_correct_p2": "can't be choosers.",
+    "difficulty": 4,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Ee Mënsch ass",
+    "lu_part2": "deem aneren säin Däiwel.",
+    "en_literal_p1": "One person is",
+    "en_literal_p2": "the other's devil.",
+    "en_correct_p1": "Man is",
+    "en_correct_p2": "his own worst enemy.",
+    "difficulty": 3,
+    "popularity": 3
+  },
+  {
+    "lu_part1": "Et soll een den Däiwel",
+    "lu_part2": "net un d'Wand molen.",
+    "en_literal_p1": "One should not paint the devil",
+    "en_literal_p2": "on the wall.",
+    "en_correct_p1": "Don't tempt",
+    "en_correct_p2": "fate.",
+    "difficulty": 3,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Wann ee vum Däiwel schwätzt,",
+    "lu_part2": "dann ass e schonn do.",
+    "en_literal_p1": "When one talks of the devil,",
+    "en_literal_p2": "then he is already there.",
+    "en_correct_p1": "Speak of the devil,",
+    "en_correct_p2": "and he shall appear.",
+    "difficulty": 1,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Dee Kärel huet",
+    "lu_part2": "der Däiwel an der Panz!",
+    "en_literal_p1": "That guy has",
+    "en_literal_p2": "the devil in his belly!",
+    "en_correct_p1": "That guy is",
+    "en_correct_p2": "full of mischief.",
+    "difficulty": 5,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Wat ënner den Dësch fält,",
+    "lu_part2": "ass fir d'Mod.",
+    "en_literal_p1": "What falls under the table",
+    "en_literal_p2": "is for the maid.",
+    "en_correct_p1": "Finders",
+    "en_correct_p2": "keepers.",
+    "difficulty": 4,
+    "popularity": 3
+  },
+  {
+    "lu_part1": "Hien ass um Dill, éier der Däiwel",
+    "lu_part2": "Schong an Huesen unhuet.",
+    "en_literal_p1": "He is up before the devil",
+    "en_literal_p2": "has shoes and pants on.",
+    "en_correct_p1": "He is",
+    "en_correct_p2": "an early bird.",
+    "difficulty": 5,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Ëmsoss ass der Doud",
+    "lu_part2": "an dee kascht d'Liewen!",
+    "en_literal_p1": "Free is death",
+    "en_literal_p2": "and that costs life!",
+    "en_correct_p1": "There is no such thing",
+    "en_correct_p2": "as a free lunch.",
+    "difficulty": 4,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Aarm a räich,",
+    "lu_part2": "der Doud mécht alles gläich.",
+    "en_literal_p1": "Poor and rich,",
+    "en_literal_p2": "death makes all equal.",
+    "en_correct_p1": "Death",
+    "en_correct_p2": "is the great leveler.",
+    "difficulty": 2,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Deem enge säin Doud,",
+    "lu_part2": "deem anere säi Brout!",
+    "en_literal_p1": "One's death,",
+    "en_literal_p2": "the other's bread!",
+    "en_correct_p1": "One man's meat",
+    "en_correct_p2": "is another man's poison.",
+    "difficulty": 3,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Wat een am Dreck méi réiert,",
+    "lu_part2": "wat et méi sténkt.",
+    "en_literal_p1": "The more one stirs the dirt,",
+    "en_literal_p2": "the more it stinks.",
+    "en_correct_p1": "Let sleeping",
+    "en_correct_p2": "dogs lie.",
+    "difficulty": 3,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Hie steet do",
+    "lu_part2": "ewéi d'Kand beim Dreck.",
+    "en_literal_p1": "He stands there",
+    "en_literal_p2": "like the child by the dirt.",
+    "en_correct_p1": "He is",
+    "en_correct_p2": "completely clueless.",
+    "difficulty": 5,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Dräimol ass gëttlech,",
+    "lu_part2": "véiermol ass spëttlech.",
+    "en_literal_p1": "Three times is divine,",
+    "en_literal_p2": "four times is mocking.",
+    "en_correct_p1": "Third time",
+    "en_correct_p2": "is the charm.",
+    "difficulty": 4,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Wat ee méi drénkt,",
+    "lu_part2": "wat ee méi duuschtereg gëtt.",
+    "en_literal_p1": "The more one drinks,",
+    "en_literal_p2": "the thirstier one gets.",
+    "en_correct_p1": "Greed",
+    "en_correct_p2": "is never satisfied.",
+    "difficulty": 2,
+    "popularity": 3
+  },
+  {
+    "lu_part1": "Fir d'Duechter ze kréien,",
+    "lu_part2": "muss een d'Mamm freien.",
+    "en_literal_p1": "To get the daughter,",
+    "en_literal_p2": "one must woo the mother.",
+    "en_correct_p1": "To win someone over,",
+    "en_correct_p2": "win their family first.",
+    "difficulty": 4,
+    "popularity": 3
+  },
+  {
+    "lu_part1": "Ëmgekéiert",
+    "lu_part2": "ass och gefuer.",
+    "en_literal_p1": "Backwards",
+    "en_literal_p2": "is also driving.",
+    "en_correct_p1": "Even a setback",
+    "en_correct_p2": "is still a form of progress.",
+    "difficulty": 4,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Et reent ewéi",
+    "lu_part2": "mat Eemeren.",
+    "en_literal_p1": "It rains like",
+    "en_literal_p2": "with buckets.",
+    "en_correct_p1": "It is raining",
+    "en_correct_p2": "cats and dogs.",
+    "difficulty": 2,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Alles huet en Enn,",
+    "lu_part2": "nëmmen d'Wurscht huet der zwee.",
+    "en_literal_p1": "Everything has an end,",
+    "en_literal_p2": "only the sausage has two.",
+    "en_correct_p1": "All good things",
+    "en_correct_p2": "must come to an end.",
+    "difficulty": 3,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Vum Fale",
+    "lu_part2": "léieren d'Kanner goen.",
+    "en_literal_p1": "From falling,",
+    "en_literal_p2": "children learn to walk.",
+    "en_correct_p1": "Failure",
+    "en_correct_p2": "is the best teacher.",
+    "difficulty": 2,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Dat huet mäi klenge Fanger",
+    "lu_part2": "mer gesot.",
+    "en_literal_p1": "That, my little finger",
+    "en_literal_p2": "told me.",
+    "en_correct_p1": "A little bird",
+    "en_correct_p2": "told me.",
+    "difficulty": 2,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Et passt wéi d'Fauscht",
+    "lu_part2": "op d'A.",
+    "en_literal_p1": "It fits like the fist",
+    "en_literal_p2": "on the eye.",
+    "en_correct_p1": "It does not",
+    "en_correct_p2": "fit at all.",
+    "difficulty": 4,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Wie mat Feier ëmgeet,",
+    "lu_part2": "verbrennt sech.",
+    "en_literal_p1": "Who plays with fire,",
+    "en_literal_p2": "gets burned.",
+    "en_correct_p1": "If you play with fire,",
+    "en_correct_p2": "you get burned.",
+    "difficulty": 1,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Et muss een e klenge Fësch an d'Waasser werfen,",
+    "lu_part2": "fir een décken ze fänken.",
+    "en_literal_p1": "One must throw a small fish in,",
+    "en_literal_p2": "to catch a big one.",
+    "en_correct_p1": "You have to spend money",
+    "en_correct_p2": "to make money.",
+    "difficulty": 3,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Un de Fiederen erkennt een",
+    "lu_part2": "d'Vullen.",
+    "en_literal_p1": "By the feathers one recognizes",
+    "en_literal_p2": "the birds.",
+    "en_correct_p1": "Birds of a feather",
+    "en_correct_p2": "flock together.",
+    "difficulty": 2,
+    "popularity": 4
+  },
+  {
+    "lu_part1": "Eng uerg Fra",
+    "lu_part2": "ass een Zonk ëm d'Haus.",
+    "en_literal_p1": "A bad woman",
+    "en_literal_p2": "is a fence around the house.",
+    "en_correct_p1": "A difficult wife",
+    "en_correct_p2": "keeps people away.",
+    "difficulty": 5,
+    "popularity": 1
+  },
+  {
+    "lu_part1": "Fréi opstoe",
+    "lu_part2": "mécht den Dag laang.",
+    "en_literal_p1": "Early rising",
+    "en_literal_p2": "makes the day long.",
+    "en_correct_p1": "The early bird",
+    "en_correct_p2": "catches the worm.",
+    "difficulty": 1,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Engem geschenkte Gaul",
+    "lu_part2": "kuckt een net an d'Maul.",
+    "en_literal_p1": "A gifted horse",
+    "en_literal_p2": "one does not look in the mouth.",
+    "en_correct_p1": "Don't look",
+    "en_correct_p2": "a gift horse in the mouth.",
+    "difficulty": 1,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "D'Kanner an d'Gecke",
+    "lu_part2": "soen d'Wourecht.",
+    "en_literal_p1": "Children and fools",
+    "en_literal_p2": "tell the truth.",
+    "en_correct_p1": "Children and fools",
+    "en_correct_p2": "tell the truth.",
+    "difficulty": 2,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "D'Geld regéiert",
+    "lu_part2": "d'Welt.",
+    "en_literal_p1": "Money rules",
+    "en_literal_p2": "the world.",
+    "en_correct_p1": "Money makes",
+    "en_correct_p2": "the world go round.",
+    "difficulty": 1,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "E gutt Gewëssen",
+    "lu_part2": "ass dat bescht Këssen.",
+    "en_literal_p1": "A good conscience",
+    "en_literal_p2": "is the best pillow.",
+    "en_correct_p1": "A clear conscience",
+    "en_correct_p2": "is a soft pillow.",
+    "difficulty": 2,
+    "popularity": 5
+  },
+  {
+    "lu_part1": "Honger",
+    "lu_part2": "ass dee beschte Kach.",
+    "en_literal_p1": "Hunger",
     "en_literal_p2": "is the best cook.",
     "en_correct_p1": "Hunger",
-    "en_correct_p2": "is the best sauce."
+    "en_correct_p2": "is the best sauce.",
+    "difficulty": 1,
+    "popularity": 5
   },
   {
-    "lu_part1": "Moiesstonn",
-    "lu_part2": "huet Gold am Mond.",
-    "en_literal_p1": "Morning hour",
-    "en_literal_p2": "has gold in the mouth.",
-    "en_correct_p1": "The early bird",
-    "en_correct_p2": "catches the worm."
+    "lu_part1": "Vill Käch",
+    "lu_part2": "verdierwen de Bräi.",
+    "en_literal_p1": "Many cooks",
+    "en_literal_p2": "spoil the porridge.",
+    "en_correct_p1": "Too many cooks",
+    "en_correct_p2": "spoil the broth.",
+    "difficulty": 1,
+    "popularity": 5
   },
   {
-    "lu_part1": "Stëll Waasser",
-    "lu_part2": "sinn déif.",
-    "en_literal_p1": "Still waters",
-    "en_literal_p2": "are deep.",
-    "en_correct_p1": "Still waters",
-    "en_correct_p2": "run deep."
+    "lu_part1": "Wie fir d'lescht laacht,",
+    "lu_part2": "laacht am beschten.",
+    "en_literal_p1": "Who laughs last,",
+    "en_literal_p2": "laughs best.",
+    "en_correct_p1": "He who laughs last,",
+    "en_correct_p2": "laughs longest.",
+    "difficulty": 1,
+    "popularity": 5
   },
   {
-    "lu_part1": "Wann den Hond net geschass hätt,",
-    "lu_part2": "hätt en den Hues kritt.",
-    "en_literal_p1": "If the dog hadn't pooped,",
-    "en_literal_p2": "he would have caught the hare.",
-    "en_correct_p1": "If 'ifs' and 'ands'",
-    "en_correct_p2": "were pots and pans."
+    "lu_part1": "Wou gehuwwelt gëtt,",
+    "lu_part2": "fale Spéin.",
+    "en_literal_p1": "Where planing happens,",
+    "en_literal_p2": "shavings fall.",
+    "en_correct_p1": "You can't make an omelet",
+    "en_correct_p2": "without breaking eggs.",
+    "difficulty": 3,
+    "popularity": 5
   },
   {
-    "lu_part1": "An der Nout",
-    "lu_part2": "frisst den Deiwel Mécken.",
-    "en_literal_p1": "In the need,",
-    "en_literal_p2": "the devil eats flies.",
-    "en_correct_p1": "Beggars",
-    "en_correct_p2": "can't be choosers."
-  },
-  {
-    "lu_part1": "Kueben",
-    "lu_part2": "picken deene aneren d'Aen net aus.",
-    "en_literal_p1": "Ravens",
-    "en_literal_p2": "don't pick the eyes out of others.",
-    "en_correct_p1": "There is honor",
-    "en_correct_p2": "among thieves."
+    "lu_part1": "Engem en X",
+    "lu_part2": "fir en U virmaachen.",
+    "en_literal_p1": "To present an X",
+    "en_literal_p2": "as a U.",
+    "en_correct_p1": "To pull the wool",
+    "en_correct_p2": "over someone's eyes.",
+    "difficulty": 4,
+    "popularity": 4
   }
 ]
