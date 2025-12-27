@@ -1,7 +1,7 @@
 <script>
 import sayingsData from '$lib/dataset.json';
 import GameCard from '$lib/components/GameCard.svelte';
-import { themeMode, initializeTheme, playerCount } from '$lib/stores';
+import { themeMode, initializeTheme, playerCount, playerScores, currentCardScores, initializePlayerScores, resetPlayerScores } from '$lib/stores';
 
 let state = 'settings';
 let rounds = 15;
@@ -16,9 +16,11 @@ let difficulty = 'medium';
 import PlayerModal from '$lib/components/PlayerModal.svelte';
 
 let playerModal;
+let players = [];
 
-// Initialize theme
+// Initialize theme and player scores
 initializeTheme();
+initializePlayerScores();
 
     function startGame() {
         gameSet = [...sayingsData]
@@ -134,7 +136,13 @@ initializeTheme();
                 </select>
             </div> -->
         
-            <button class="btn-primary" on:click={startGame}>Start Game</button>
+            <button class="btn-primary" on:click={() => {
+                const savedPlayers = localStorage.getItem('players');
+                players = savedPlayers ? JSON.parse(savedPlayers).filter(player => player.trim().length > 0) : [];
+                resetPlayerScores();
+                startGame();
+            }}>Start Game</button>
+            <divider class='divider'> – or – </divider>
             <button class="btn-secondary" on:click={() => playerModal.openModal()}>Players ({$playerCount})</button>
             <PlayerModal bind:this={playerModal} />
 
@@ -169,6 +177,33 @@ initializeTheme();
                 {#each gameSet as saying, i}
                     <div class="snap-point">
                         <GameCard {saying} {mode} revealed={saying.isRevealed} />
+                        {#if saying.isRevealed && players.length > 0}
+                            <div class="player-scores-container">
+                                <div class="player-scores">
+                                    {#each players as player, index}
+                                        <button
+                                            class="score-button {$currentCardScores[i] && $currentCardScores[i][player] ? 'active' : ''}"
+                                            on:click={() => {
+                                                if ($currentCardScores[i] && $currentCardScores[i][player]) {
+                                                    currentCardScores.update(scores => {
+                                                        delete scores[i][player];
+                                                        return scores;
+                                                    });
+                                                } else {
+                                                    currentCardScores.update(scores => {
+                                                        if (!scores[i]) scores[i] = {};
+                                                        scores[i][player] = true;
+                                                        return scores;
+                                                    });
+                                                }
+                                            }}
+                                        >
+                                            {player} ({Object.keys($currentCardScores[i] || {}).length})
+                                        </button>
+                                    {/each}
+                                </div>
+                            </div>
+                        {/if}
                     </div>
                 {/each}
             </div>
@@ -209,6 +244,13 @@ initializeTheme();
     :global(body.light-mode) { background: #f8f9fa; }
 
     main { height: 100svh; width: 100svw; display: flex; flex-direction: column; }
+
+    .divider {
+        opacity: 0.8;
+        font-size: 1.2em;
+        font-style: bold;
+        margin-top: 25px;
+    }
 
     .screen { height: 100svh; display: flex; flex-direction: column; padding: 2rem; box-sizing: border-box; position: relative; }
     .settings { justify-content: center; align-items: center; max-width: 400px; margin: 0 auto; }

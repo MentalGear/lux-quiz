@@ -70,6 +70,7 @@
             {/if}
         {/if}
     </div>
+    
 </div>
 
 <style>
@@ -120,5 +121,40 @@
         opacity: 1;
         filter: blur(0px);
         transform: translateY(0);
+    }
+
+    .player-scores-container {
+        position: absolute;
+        bottom: -60px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .player-scores {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        max-width: 85svw;
+    }
+
+    .score-button {
+        padding: 0.75rem 1.5rem;
+        border: 2px solid #ddd;
+        border-radius: 100px;
+        background: white;
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        font-weight: 600;
+        margin: 0.5rem;
+    }
+
+    .score-button.active {
+        background: #EF3340;
+        color: white;
+        border-color: #EF3340;
     }
 </style>

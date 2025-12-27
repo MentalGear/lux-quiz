@@ -2,6 +2,10 @@ import { writable } from 'svelte/store';
 
 export const themeMode = writable('device');
 export const playerCount = writable(0);
+export const playerScores = writable({});
+export const currentCardScores = writable({});
+
+// @ts-ignore
 
 // @ts-ignore
 
@@ -39,4 +43,18 @@ export function initializePlayerCount() {
             playerCount.set(filteredPlayers.length);
         }
     }
+}
+
+export function initializePlayerScores() {
+    if (typeof window !== 'undefined') {
+        const savedScores = localStorage.getItem('playerScores');
+        if (savedScores) {
+            playerScores.set(JSON.parse(savedScores));
+        }
+    }
+}
+
+export function resetPlayerScores() {
+    playerScores.set({});
+    currentCardScores.set({});
 }

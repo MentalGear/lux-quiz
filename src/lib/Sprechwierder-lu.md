@@ -1,20 +1,3 @@
-Create dataset.json with this structure example. Add a difficulty setting from 1-5.
-
-{
-    "lu_part1": "Den Honger",
-    "lu_part2": "ass de beschte Kach.",
-    "en_literal_p1": "The hunger",
-    "en_literal_p2": "is the best cook.",
-    "en_correct_p1": "Hunger",
-    "en_correct_p2": "is the best sauce."
-  },
-  
--------------
-
-Imclude all these sayings:
-
-# Sprechwierder (lu)
-
 A
 
 Wien A seet, muss och B soen.

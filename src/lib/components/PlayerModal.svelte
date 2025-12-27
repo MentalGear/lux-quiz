@@ -1,6 +1,6 @@
 <script>
 import { fade, slide } from 'svelte/transition';
-import { themeMode, initializeTheme, playerCount, initializePlayerCount } from '$lib/stores';
+import { themeMode, initializeTheme, playerCount, initializePlayerCount, playerScores, initializePlayerScores } from '$lib/stores';
 
 let players = [''];
 let isOpen = false;
@@ -26,8 +26,9 @@ export function closeModal() {
     isOpen = false;
 }
 
-// Initialize player count on component mount
+// Initialize player count and scores on component mount
 initializePlayerCount();
+initializePlayerScores();
 
 function addPlayer() {
     const lastPlayer = players[players.length - 1];
@@ -55,6 +56,11 @@ $: if (typeof window !== 'undefined') {
     const filteredPlayers = players.filter(player => player.trim().length > 0);
     localStorage.setItem('players', JSON.stringify(filteredPlayers));
     playerCount.set(filteredPlayers.length);
+}
+
+// Save player scores to localStorage whenever they change
+$: if (typeof window !== 'undefined') {
+    localStorage.setItem('playerScores', JSON.stringify(playerScores));
 }
 </script>
 
@@ -150,6 +156,7 @@ $: if (typeof window !== 'undefined') {
     .remove-player {
         background: #EF3340;
         color: white;
+        font-size:1.5em;
         border: none;
         width: 40px;
         height: 40px;

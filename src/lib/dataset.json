@@ -6,8 +6,8 @@
     "en_literal_p2": "must also say B.",
     "en_correct_p1": "In for a penny,",
     "en_correct_p2": "in for a pound.",
-    "difficulty": 2,
-    "popularity": 5
+    "culturalPopularity": 5,
+    "wordsDifficulty": 2
   },
   {
     "lu_part1": "Wann d'Aarbecht ee räich méich,",
