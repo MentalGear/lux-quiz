@@ -1,29 +1,24 @@
 <script>
-    import sayingsData from '$lib/dataset.json';
-    import GameCard from '$lib/components/GameCard.svelte';
+import sayingsData from '$lib/dataset.json';
+import GameCard from '$lib/components/GameCard.svelte';
+import { themeMode, initializeTheme, playerCount } from '$lib/stores';
 
-    let state = 'settings';
-    let rounds = 5;
-    let mode = 'lu';
-    let gameSet = [];
-    let container;
-    let currentIndex = 0;
-    let showConfirm = false;
-    let themeMode = 'device';
-    let popularityMin = 1;
-    let popularityMax = 5;
-    let difficulty = 'medium';
+let state = 'settings';
+let rounds = 15;
+let mode = 'lu';
+let gameSet = [];
+let container;
+let currentIndex = 0;
+let showConfirm = false;
+let popularityMin = 1;
+let popularityMax = 5;
+let difficulty = 'medium';
+import PlayerModal from '$lib/components/PlayerModal.svelte';
 
-    // Initialize theme on page load
-    $: if (themeMode === 'device') {
-        if (typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.body.classList.add('dark-mode');
-            document.body.classList.remove('light-mode');
-        } else if (typeof window !== 'undefined') {
-            document.body.classList.add('light-mode');
-            document.body.classList.remove('dark-mode');
-        }
-    }
+let playerModal;
+
+// Initialize theme
+initializeTheme();
 
     function startGame() {
         gameSet = [...sayingsData]
@@ -82,24 +77,7 @@
     }
 
     function setTheme(newMode) {
-        themeMode = newMode;
-        // Apply theme to body
-        if (themeMode === 'dark') {
-            document.body.classList.add('dark-mode');
-            document.body.classList.remove('light-mode');
-        } else if (themeMode === 'light') {
-            document.body.classList.add('light-mode');
-            document.body.classList.remove('dark-mode');
-        } else if (themeMode === 'device') {
-            // Use device preference
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                document.body.classList.add('dark-mode');
-                document.body.classList.remove('light-mode');
-            } else {
-                document.body.classList.add('light-mode');
-                document.body.classList.remove('dark-mode');
-            }
-        }
+        themeMode.set(newMode);
     }
 
     // Calculate progress for the top bar
@@ -157,11 +135,13 @@
             </div> -->
         
             <button class="btn-primary" on:click={startGame}>Start Game</button>
+            <button class="btn-secondary" on:click={() => playerModal.openModal()}>Players ({$playerCount})</button>
+            <PlayerModal bind:this={playerModal} />
 
 
             <div class="control" style="margin-top: 50px; opacity: 0.5">
                 <label>Theme</label>
-                <select bind:value={themeMode} on:change={() => setTheme(themeMode)}>
+                <select bind:value={$themeMode} on:change={() => setTheme($themeMode)}>
                     <option value="light">Light Mode</option>
                     <option value="dark">Dark Mode</option>
                     <option value="device">Device Settings</option>
@@ -426,5 +406,16 @@
     .btn-primary {
         background: #EF3340; color: white; border: none; padding: 1.5rem 3rem;
         border-radius: 100px; font-weight: bold; font-size: 1.2rem; cursor: pointer; width: 100%;
+    }
+
+    .btn-secondary {
+        background: transparent; color: #666; border: 2px solid #ddd; padding: 0.75rem 1.5rem;
+        border-radius: 100px; font-weight: bold; font-size: 1rem; cursor: pointer; width: 100%;
+        margin-top: 1rem;
+    }
+
+    :global(body.dark-mode) .btn-secondary {
+        color: #f8f9fa;
+        border-color: #666;
     }
 </style>
