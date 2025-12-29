@@ -275,7 +275,7 @@
 							</button>
 							<div class="menu-item mode-item">
 								<!-- <span class="icon">🇱🇺</span> -->
-								<select class="overlay-mode-select" bind:value={mode}>
+								<select class="overlay-mode-select" bind:value={mode} on:change={toggleOverlay}>
 									<option value="lu">Luxembourgish Only</option>
 									<option value="literal">LU + English Literal</option>
 									<option value="correct">LU + English Equivalent</option>
@@ -286,7 +286,8 @@
 								Report Issue
 							</button>
 							<button class="menu-item quit" on:click={quitGame}>
-								<span class="icon">✕</span> Quit Game
+								<!-- <span class="icon">✕</span> -->
+								Quit Game
 							</button>
 						</div>
 					</div>
@@ -356,7 +357,7 @@
 		<div class="screen finished" in:fade>
 			<div class="finished-content">
 				<h1 class="finished-title">Game Finished!</h1>
-				<p class="finished-stats">You've completed all {rounds} cards.</p>
+				<!-- <p class="finished-stats">You've completed all {rounds} cards.</p> -->
 				<div class="finished-actions">
 					<button
 						class="btn-primary"
