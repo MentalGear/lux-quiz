@@ -25,7 +25,10 @@
 		"vite": "^7.2.6"
 	},
 	"dependencies": {
+		"@ai-sdk/google": "^3.0.1",
+		"@ai-sdk/mistral": "^3.0.1",
 		"@mistralai/mistralai": "^1.11.0",
+		"ai": "^6.0.3",
 		"zod": "^4.2.1"
 	}
 }
