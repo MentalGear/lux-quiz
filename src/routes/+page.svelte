@@ -8,7 +8,9 @@
 		playerScores,
 		currentCardScores,
 		initializePlayerScores,
-		resetPlayerScores
+		resetPlayerScores,
+		explicitness,
+		initializeExplicitness
 	} from '$lib/stores';
 
 	let state = 'settings';
@@ -29,9 +31,11 @@
 	// Initialize theme and player scores
 	initializeTheme();
 	initializePlayerScores();
+	initializeExplicitness();
 
 	function startGame() {
 		gameSet = [...sayingsData]
+			.filter((s) => s.vulgarity <= $explicitness)
 			.sort(() => 0.5 - Math.random())
 			.slice(0, rounds)
 			.map((s) => ({ ...s, isRevealed: false }));
@@ -154,6 +158,17 @@
 					</select>
 				</div>
 				<!-- <span>Min: {popularityMin}, Max: {popularityMax}</span> -->
+			</div>
+
+			<div class="control">
+				<label>Explicitness (Max: {$explicitness})</label>
+				<select bind:value={$explicitness}>
+					{#each [1, 2, 3, 4, 5] as num}
+						<option value={num}
+							>{num} {num === 1 ? '(Clean)' : num === 5 ? '(Explicit)' : ''}</option
+						>
+					{/each}
+				</select>
 			</div>
 
 			<!-- <div class="control">
