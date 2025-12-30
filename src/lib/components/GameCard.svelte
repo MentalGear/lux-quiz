@@ -115,6 +115,7 @@
 <style>
 	.card {
 		width: 60svw;
+		min-width: 320px;
 		max-width: 500px;
 		height: 60svh;
 		background: var(--bg-card);
